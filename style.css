@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.logo {
+    margin-bottom: 20px;
+    color: chocolate;
+    font-size: xx-large;
+}
+
+.search-bar {
+    width: 200%; /* Ensure the search bar container takes full width */
+    display: flex;
+    justify-content: center; /* Center the input horizontally */
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%; /* Set a fixed width in percentage */
+    max-width: 800px; /* Optional: Set a max width to prevent it from being too large */
+    padding: 20px; /* Increase padding for a bigger input field */
+    font-size: 18px; /* Adjust font size */
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    outline: none;
+}
+
+#search-input:focus {
+    border-color: #007BFF;
+}
+
+.extra-content {
+    margin-top: 20px;
+}
+
+.extra-content p {
+    margin-bottom: 10px;
+}
+
+.extra-content img {
+    max-width: 100px;
+    height: auto;
+}
