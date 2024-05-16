@@ -1,5 +1,8 @@
+
+from openai import OpenAI
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from OpenAPI import get_openai_response
 
 app = Flask(__name__)
 CORS(app)
@@ -13,8 +16,10 @@ def search():
         print('You searched for:', input_value)
         # Process input_value as needed (e.g., use it as a prompt for the OpenAI API)
         # For demonstration, let's return a dummy result
-        result = 'Dummy result for: ' + input_value
+        result = get_openai_response(input_value)
+        print(result)
         return jsonify({'result': result})
+        
 
 
 
