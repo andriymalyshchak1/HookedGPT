@@ -14,8 +14,6 @@ def search():
         return jsonify({'error': 'Invalid input: Value is empty or null'})
     else:
         print('You searched for:', input_value)
-        # Process input_value as needed (e.g., use it as a prompt for the OpenAI API)
-        # For demonstration, let's return a dummy result
         result = get_openai_response(input_value)
         print(result)
         return jsonify({'result': result})
