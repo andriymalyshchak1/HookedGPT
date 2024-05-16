@@ -4,7 +4,7 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
         if (inputValue === '') {
             alert('Invalid Input');
         } else {
-            console.log('You searched for:', inputValue);
+            console.log('You  searched for:', inputValue);
 
             // Send the input to the Flask server
             fetch('/', {
