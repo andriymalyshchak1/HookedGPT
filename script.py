@@ -7,14 +7,23 @@ See the getting started guide for more information:
 https://ai.google.dev/gemini-api/docs/get-started/python
 """
 import os
+from dotenv import load_dotenv
 import google.generativeai as genai
 
-genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
+load_dotenv()
+print("GOOGLE_API_KEY:", os.getenv("GOOGLE_API_KEY"))
+
+api_key = os.getenv("GOOGLE_API_KEY")
+if not api_key:
+    raise ValueError("API key not found in environment variables")
+
+genai.configure(api_key=api_key)
+
 generation_config = {
   "temperature": 1,
   "top_p": 0.95,
   "top_k": 64,
-  "max_output_tokens": 8192,
+  "max_output_tokens": 2048,
   "response_mime_type": "text/plain",
 }
 model = genai.GenerativeModel(
