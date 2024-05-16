@@ -39,7 +39,7 @@ body, html {
 }
 
 #search-input {
-    width: 100%; /* Set a fixed width in percentage */
+    width: 101%; /* Set a fixed width in percentage */
     max-width: 800px; /* Optional: Set a max width to prevent it from being too large */
     padding: 20px; /* Increase padding for a bigger input field */
     font-size: 18px; /* Adjust font size */

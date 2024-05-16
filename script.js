@@ -1,22 +1,24 @@
 document.getElementById('search-input').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        if(this.value.trim() === ''){
+        const inputValue = this.value.trim(); // Get trimmed input value
+        if (inputValue === '') {
             alert('Invalid Input');
-        }
-        else {
-            const input = this.value.trim();
-            console.log('You searched for:', input);
+        } else {
+            console.log('You searched for:', inputValue);
 
             // Send the input to the Flask server
-            fetch('/search', {
+            fetch('/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ value: input })
+                body: JSON.stringify({ input: inputValue }) // Use 'input' as key
             })
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
+                // Handle response data here
+                console.log('Search results:', data);
+            })
             .catch(error => console.error('Error:', error));
         }
     }
