@@ -16,6 +16,8 @@ def search():
         result = 'Dummy result for: ' + input_value
         return jsonify({'result': result})
 
+
+
 if __name__ == '__main__':
     app.run(debug=True)
 

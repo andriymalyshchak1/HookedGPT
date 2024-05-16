@@ -37,6 +37,12 @@ body, html {
     justify-content: center; /* Center the input horizontally */
     margin-bottom: 20px;
 }
+.output-bar{
+    width: 200%; /* Ensure the search bar container takes full width */
+    display: flex;
+    justify-content: center; /* Center the input horizontally */
+    margin-bottom: 20px;
+}
 
 #search-input {
     width: 100%; /* Set a fixed width in percentage */
@@ -46,6 +52,16 @@ body, html {
     border: 1px solid #ccc;
     border-radius: 24px;
     outline: none;
+}
+#search-output{
+    width: 100%; /* Set a fixed width in percentage */
+    padding: 90px; /* Increase padding for a bigger input field */
+    font-size: 18px; /* Adjust font size */
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    outline: none;
+    background-color: white; /* Set white background */
+    color: #000000; 
 }
 
 #search-input:focus {
@@ -63,4 +79,8 @@ body, html {
 .extra-content img {
     max-width: 100px;
     height: auto;
+}
+.bottom-text{
+    position: fixed;
+    bottom: 0;
 }
