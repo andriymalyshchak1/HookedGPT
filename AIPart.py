@@ -1,11 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-
-@app.route('/', methods=['POST'])
+CORS(app)
+@app.route('/', methods=['POST'])  # Correct route definition
 def search():
     data = request.json
-    input_value = data.get('value', '').strip()  # Changed key to 'value'
+    input_value = data.get('input', '').strip()  # Changed key to 'input'
     if not input_value:
         return jsonify({'error': 'Invalid input: Value is empty or null'})
     else:
@@ -15,6 +16,6 @@ def search():
         result = 'Dummy result for: ' + input_value
         return jsonify({'result': result})
 
-
 if __name__ == '__main__':
     app.run(debug=True)
+

@@ -7,7 +7,7 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
             console.log('You  searched for:', inputValue);
 
             // Send the input to the Flask server
-            fetch('/', {
+            fetch('http://127.0.0.1:5000/', {  // Correct URL for Flask server
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -23,3 +23,4 @@ document.getElementById('search-input').addEventListener('keydown', function(eve
         }
     }
 });
+
